@@ -11,7 +11,8 @@ export default {
         roboto: ['Roboto', 'sans-serif'], 
         anton: ['Anton SC' ,'sans-serif' ] ,
         markazi : ['Markazi Text' , 'sans-serif' ],
-        antontwo : ['Anton' , 'sans-serif']
+        antontwo : ['Anton' , 'sans-serif'] ,
+        oswald : ['Oswald' , 'sans-serif']
       } ,
       height : {
         '2svh' : '2svh'
