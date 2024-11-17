@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import infrastructure from '../../assets/infrastructure.png';
-import { HoverEffect } from "../ui/card-hover-effect";
 
 interface componentprop {
     data : 
