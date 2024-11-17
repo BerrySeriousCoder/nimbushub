@@ -1,6 +1,6 @@
 import { HoverEffect } from "../ui/card-hover-effect";
 import lightning from '../../assets/lightning.png';
-import serviceBg from '../../svgs/servicesection.svg';
+import serviceBg from '../../assets/svgs/servicesection.svg';
 
 export const Services = () => {
 

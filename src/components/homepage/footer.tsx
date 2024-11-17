@@ -4,7 +4,7 @@ import notepad from '../../assets/notepad.png';
 import marketing from '../../assets/marketing.png';
 import rocket from '../../assets/startup.png';
 import mainLogo from '../../assets/mainlogo.png';
-import footerbg from '../../svgs/footersection.svg';
+import footerbg from '../../assets/svgs/footersection.svg';
 
 export const Footer = () => {
   return (
