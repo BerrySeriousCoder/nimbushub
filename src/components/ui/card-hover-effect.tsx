@@ -1,7 +1,8 @@
 import { cn } from "../../lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-
+import point from '../../assets/point.png'
+import check from '../../assets/check.png'
 export const HoverEffect = ({
   items,
   className,
@@ -48,9 +49,16 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle> 
-            <div className="text-xl font-oswald text-white py-4"  > Overview :</div>
+            <div className=" text-base lg:text-xl font-oswald text-white py-4 flex items-center gap-2"  > 
+            <img className="  h-5  " src={check} alt="check" />
+               Overview 
+            </div>
+            
             <CardOverview>{item.overview}</CardOverview>
-            <div className="text-xl font-oswald text-white py-4 "  >Deliverables :</div>
+            <div className="text-base lg:text-xl font-oswald text-white py-4 flex items-center gap-2 "  > 
+            <img className="h-5" src={check} alt="check" />
+              Deliverables 
+            </div>
             <CardDescription>{item.deliverables}</CardDescription>
           </Card>
         </div>
@@ -87,7 +95,8 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-antontwo text-2xl tracking-wide mt-4", className)}>
+    <h4 className={cn("text-zinc-100 font-antontwo text-lg lg:text-2xl tracking-wide  lg:mt-4 flex items-center gap-3", className)}>
+      <img className=" h-10 lg:h-16" src={point} alt="point" />
       {children}
     </h4>
   );
@@ -102,7 +111,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        " text-white font-roboto tracking-wide leading-relaxed text-base",
+        " text-cyan-300 font-robotoCondensed tracking-wide leading-relaxed  text-sm lg:text-base",
         className
       )}
     >
@@ -120,7 +129,7 @@ export const CardOverview = ({
   return (
     <p
       className={cn(
-        " text-cyan-300 font-roboto tracking-wide leading-relaxed text-base",
+        " text-cyan-300 font-robotoCondensed tracking-wide leading-relaxed text-sm lg:text-base",
         className
       )}
     >

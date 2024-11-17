@@ -1,30 +1,69 @@
-import { Button } from '@mui/material'
-import logo from '../../assets/nimbuslogo.png'
+import { Button } from '@mui/material';
+import logo from '../../assets/mainlogoblue.png';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export const Navbar = () => {
-    return (
-        <div className='flex justify-between px-4 items-center bg-[#73e8e7] ' >
-               <div className='text-xl ' >
-                        {/* <img className='h-16' src={logo} alt="logo" /> */}
-                        NIMBUSHUB
-               </div>
-               <div className='flex items-center w-96 justify-between text-blue-950' >
-                         <div>
-                            Home
-                         </div>
-                         <div>
-                            Pricing
-                         </div>
-                         <div>
-                            About
-                         </div>
-                         <div>
-                            Experts
-                         </div>
-               </div>
-               <div>
-               <Button sx={{height: '3rem', color : '#133E87'}} variant="outlined">Request Demo</Button>
-               </div>
-        </div>
-    )
-}
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  return (
+    <div className="flex justify-between items-center bg-[#73e8e7] px-4">
+      <div className="text-xl">
+        <img className=" h-10 lg:h-20" src={logo} alt="logo" />
+      </div>
+
+      <div className="hidden lg:flex items-center w-96 justify-between text-blue-950">
+        <div>Home</div>
+        <div>Pricing</div>
+        <div>About</div>
+        <div>Experts</div>
+      </div>
+
+     
+
+      <div className="lg:hidden">
+        <button onClick={toggleMobileMenu} className="text-blue-950">
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+       <AnimatePresence>
+      {isMobileMenuOpen && (
+        <motion.div 
+        initial={{ opacity: 0, x: -200 }} 
+        animate={{ opacity: 1, x: 0 }}  
+        exit={{ opacity: 0, x: 200  }}   
+        transition={{ duration: 0.3 , ease: 'easeInOut'}} 
+        className="lg:hidden flex flex-col z-50 items-center absolute bg-[#73e8e7] top-16 left-0 w-full py-4">
+          <div className="py-2">Home</div>
+          <div className="py-2">Pricing</div>
+          <div className="py-2">About</div>
+          <div className="py-2">Experts</div>
+          <div className="py-2">
+            <Button sx={{ height: '3rem', color: '#133E87' }} variant="outlined">
+              Request Demo
+            </Button>
+          </div>
+        </motion.div>
+        
+      )}
+      </AnimatePresence>
+    </div>
+  );
+};

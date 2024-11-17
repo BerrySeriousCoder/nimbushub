@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -9,6 +10,7 @@ export default {
       fontFamily : {
         bebas: ['Bebas Neue', 'cursive'], 
         roboto: ['Roboto', 'sans-serif'], 
+        robotoCondensed : ['Roboto Condensed' ,'sans-serif'] ,
         anton: ['Anton SC' ,'sans-serif' ] ,
         markazi : ['Markazi Text' , 'sans-serif' ],
         antontwo : ['Anton' , 'sans-serif'] ,
@@ -16,6 +18,9 @@ export default {
       } ,
       height : {
         '2svh' : '2svh'
+      },
+      backgroundImage : {
+          'icon' : "url('../ssap/public/wave.svg')"
       }
     },
   },
