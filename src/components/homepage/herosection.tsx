@@ -4,7 +4,6 @@ import arc from '../../assets/arctwo.jpg';
 import arrowtwo from '../../assets/gen.gif';
 import cloud from '../../assets/cloud.gif';
 import bolt from '../../assets/bolt.gif';
-import heroSectionBg from '../../assets/svgs/herosection.svg';
 
 export const HeroSection = () => {
   return (
