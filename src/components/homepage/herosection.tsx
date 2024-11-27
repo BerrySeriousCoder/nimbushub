@@ -10,7 +10,7 @@ export const HeroSection = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${heroSectionBg})`,
+        backgroundImage: `url(/herosectionbg.svg)`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
