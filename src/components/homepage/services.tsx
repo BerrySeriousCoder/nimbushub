@@ -1,6 +1,5 @@
 import { HoverEffect } from "../ui/card-hover-effect";
 import lightning from '../../assets/lightning.png';
-import serviceBg from '../../assets/svgs/servicesection.svg';
 
 export const Services = () => {
 
@@ -40,7 +39,7 @@ export const Services = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${serviceBg})`,
+        backgroundImage: `url(/servicesection.svg)`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}

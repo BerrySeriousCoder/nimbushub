@@ -4,14 +4,13 @@ import notepad from '../../assets/notepad.png';
 import marketing from '../../assets/marketing.png';
 import rocket from '../../assets/startup.png';
 import mainLogo from '../../assets/mainlogo.png';
-import footerbg from '../../assets/svgs/footersection.svg';
 
 export const Footer = () => {
   return (
     <div>
       <div className="flex flex-col justify-center   items-center bg-[#021122]">
         <div 
-          style={{ backgroundImage: `url(${footerbg})`, backgroundSize: 'cover', backgroundPosition: 'center', width: '100%' }} 
+          style={{ backgroundImage: `url(/footersection.svg)`, backgroundSize: 'cover', backgroundPosition: 'center', width: '100%' }} 
           className="lg:h-[800px] h-[300px]"
         >
           <div className="flex lg:mt-10 items-center relative flex-col text-center">
