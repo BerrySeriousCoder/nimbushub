@@ -4,8 +4,11 @@ import notepad from '../../assets/notepad.png';
 import marketing from '../../assets/marketing.png';
 import rocket from '../../assets/startup.png';
 import mainLogo from '../../assets/mainlogo.png';
+import { useState } from "react";
+import { ScheduleMeetingPopup } from "../ui/formcard";
 
 export const Footer = () => {
+  const [isOpen , setIsOpen] = useState(false)
   return (
     <div>
       <div className="flex flex-col justify-center   items-center bg-[#021122]">
@@ -23,7 +26,9 @@ export const Footer = () => {
             </div>
 
             <div className="lg:m-10 flex flex-col items-center">
-              <Button sx={{ backgroundColor: 'cyan', color: 'black', padding: '10px' , '@media (max-width : 600px)' : {padding : '4px 8px' , fontSize : '10px' }  }} variant="contained">START FREE TRIAL</Button>
+              <Button onClick={() => setIsOpen(true)} sx={{ backgroundColor: 'cyan', color: 'black', padding: '10px' , '@media (max-width : 600px)' : {padding : '4px 8px' , fontSize : '10px' }  }} variant="contained">START FREE TRIAL</Button>
+              <ScheduleMeetingPopup isOpen={isOpen}
+              onClose={() => setIsOpen(false)} ></ScheduleMeetingPopup>
               <div className="text-cyan-300 text-sm lg:text-base mt-2 lg:mt-5 ">Request demo</div>
             </div>
 
@@ -43,7 +48,7 @@ export const Footer = () => {
               alt="marketingImage"
             />
             <img 
-              className="absolute  lg:h-40 h-10 lg:top-80 top-28  lg:right-96 left-16 lg:block"
+              className="absolute  lg:h-40 h-10 lg:top-80 top-28  lg:right-96 left-16   lg:block"
               src={rocket}
               alt="rocketImage"
             />
