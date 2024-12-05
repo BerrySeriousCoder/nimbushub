@@ -12,5 +12,14 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function() {
+        const script = document.createElement('script');
+        script.src = 'https://venerable-douhua-aa5de7.netlify.app/chatbot.js';
+        script.async = true;
+        script.dataset.config = '{"greeting":"Hello! How can I help you today?","tone":"professional","primaryColor":"#2563eb","companyName":"Your Company","websiteInfo":"Welcome to our website."}';
+        document.head.appendChild(script);
+      })();
+    </script>
   </body>
 </html>
